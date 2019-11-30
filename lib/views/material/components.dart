@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import './components/Buttom.dart';
+import './components/FloatingActionButton.dart';
+import './components/PopupMenuButton.dart';
+import './components/LoginForm.dart';
+import './components/Checkbox.dart';
+import './components/Radio.dart';
+import './components/Switch.dart';
+import './components/Slider.dart';
+import './components/Datetime.dart';
+import './components/SimpleDialog.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -13,7 +23,15 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
               title: 'Floating Action Button',
               page: FloatingAcitonButtonDemo()),
-          ListItem(title: 'Button', page: ButtonDemo())
+          ListItem(title: 'Button', page: ButtonDemo()),
+          ListItem(title: 'Popup Menu Button', page: PopupMenuButtonDemo()),
+          ListItem(title: 'Login Form', page: LoginForm()),
+          ListItem(title: 'Checkbox', page: CheckboxDemo()),
+          ListItem(title: 'Radio', page: RadioDemo()),
+          ListItem(title: 'Switch', page: SwitchDemo()),
+          ListItem(title: 'Slider', page: SliderDemo()),
+          ListItem(title: 'Datetime', page: DatetimeDemo()),
+          ListItem(title: 'SimpleDialog', page: SimpleDialogDemo()),
         ],
       ),
     );
@@ -33,104 +51,6 @@ class ListItem extends StatelessWidget {
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (context) => page));
       },
-    );
-  }
-}
-
-class FloatingAcitonButtonDemo extends StatelessWidget {
-  final Widget _floatingActionButton = FloatingActionButton(
-    onPressed: () {},
-    child: Icon(Icons.add),
-    elevation: 0.0,
-    backgroundColor: Colors.black87,
-    // shape: BeveledRectangleBorder(
-    //   borderRadius: BorderRadius.circular(30.0)
-    // ),
-  );
-
-  final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
-    onPressed: () {},
-    icon: Icon(Icons.add),
-    label: Text('Add'),
-  );
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Floating Action Button'),
-        elevation: 0.0,
-      ),
-      floatingActionButton: _floatingActionButton,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 80.0,
-        ),
-        shape: CircularNotchedRectangle(),
-      ),
-    );
-  }
-}
-
-class ButtonDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final FlatButtonDemo = Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        FlatButton(
-          child: Text('Button'),
-          onPressed: () {},
-          splashColor: Colors.grey,
-          textColor: Theme.of(context).accentColor,
-        ),
-        FlatButton.icon(
-          icon: Icon(Icons.add),
-          label: Text('Button'),
-          onPressed: () {},
-          splashColor: Colors.grey,
-          textColor: Theme.of(context).accentColor,
-        )
-      ],
-    );
-
-    final RaisedButtonDemo = Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        RaisedButton(
-          child: Text('Button'),
-          onPressed: () {},
-          splashColor: Colors.grey,
-          color: Theme.of(context).accentColor,
-          textColor: Colors.white,
-          shape: StadiumBorder(),
-        ),
-        SizedBox(
-          width: 20,
-        ),
-        RaisedButton.icon(
-          icon: Icon(Icons.add),
-          label: Text('Button'),
-          onPressed: () {},
-          splashColor: Colors.grey,
-          elevation: 12.0,
-          textColor: Theme.of(context).accentColor,
-        )
-      ],
-    );
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Button'),
-        elevation: 0.0,
-      ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[FlatButtonDemo, RaisedButtonDemo]),
-      ),
     );
   }
 }

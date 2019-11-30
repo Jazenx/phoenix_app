@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FormView extends StatelessWidget {
+class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
