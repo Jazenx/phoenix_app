@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import './views/home/home.dart';
-import './views/form/form.dart';
-import './views//material/components.dart';
+import './views/material/components.dart';
 
 class App extends StatelessWidget {
   @override
@@ -11,7 +10,6 @@ class App extends StatelessWidget {
       initialRoute: '/mdc',
       routes: {
         '/': (countext) => Home(),
-        '/form': (context) => FormView(),
         '/mdc': (context) => MaterialComponents(),
       },
       theme: ThemeData(

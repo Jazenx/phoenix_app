@@ -9,6 +9,14 @@ import './components/Switch.dart';
 import './components/Slider.dart';
 import './components/Datetime.dart';
 import './components/SimpleDialog.dart';
+import './components/AlertDialog.dart';
+import './components/BottomSheet.dart';
+import './components/SnackBar.dart';
+import './components/ExpansionPanel.dart';
+import './components/Chip.dart';
+import './components/DataTable.dart';
+import './components/PaginatedDataTable.dart';
+import './components/Stepper.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -21,9 +29,12 @@ class MaterialComponents extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListItem(
+              title: 'Paginated Data Table', page: PaginatedDataTableDemo()),
+          ListItem(
               title: 'Floating Action Button',
               page: FloatingAcitonButtonDemo()),
           ListItem(title: 'Button', page: ButtonDemo()),
+          ListItem(title: 'Stepper', page: StepperDemo()),
           ListItem(title: 'Popup Menu Button', page: PopupMenuButtonDemo()),
           ListItem(title: 'Login Form', page: LoginForm()),
           ListItem(title: 'Checkbox', page: CheckboxDemo()),
@@ -31,7 +42,13 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'Switch', page: SwitchDemo()),
           ListItem(title: 'Slider', page: SliderDemo()),
           ListItem(title: 'Datetime', page: DatetimeDemo()),
-          ListItem(title: 'SimpleDialog', page: SimpleDialogDemo()),
+          ListItem(title: 'Simple Dialog', page: SimpleDialogDemo()),
+          ListItem(title: 'Alert Dialog', page: AlertDialogDemo()),
+          ListItem(title: 'Bottom Sheet', page: BottomSheetDemo()),
+          ListItem(title: 'Snack Bar', page: SnackBarDemo()),
+          ListItem(title: 'Expansion Panel', page: ExpansionPanelDemo()),
+          ListItem(title: 'Chip', page: ChipDemo()),
+          ListItem(title: 'DataTable', page: DataTableDemo()),
         ],
       ),
     );
