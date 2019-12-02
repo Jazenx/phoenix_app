@@ -50,20 +50,20 @@ class HomeListView extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      ButtonTheme.bar(
-                        child: ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: Text('Like'.toUpperCase()),
-                              onPressed: () {},
-                            ),
-                            FlatButton(
-                              child: Text('Read'.toUpperCase()),
-                              onPressed: () {},
-                            ),
-                          ],
-                        ),
-                      )
+                      // ButtonTheme.bar(
+                      //   child: ButtonBar(
+                      //     children: <Widget>[
+                      //       FlatButton(
+                      //         child: Text('Like'.toUpperCase()),
+                      //         onPressed: () {},
+                      //       ),
+                      //       FlatButton(
+                      //         child: Text('Read'.toUpperCase()),
+                      //         onPressed: () {},
+                      //       ),
+                      //     ],
+                      //   ),
+                      // )
                     ],
                   ),
                 )

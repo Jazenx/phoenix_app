@@ -11,11 +11,11 @@ class FloatingAcitonButtonDemo extends StatelessWidget {
     // ),
   );
 
-  final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
-    onPressed: () {},
-    icon: Icon(Icons.add),
-    label: Text('Add'),
-  );
+  // final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
+  //   onPressed: () {},
+  //   icon: Icon(Icons.add),
+  //   label: Text('Add'),
+  // );
 
   @override
   Widget build(BuildContext context) {
